@@ -59,8 +59,8 @@
   content: "";
   position: absolute;
   width: 106%;
-  height: 110%;
-  top: 0;
+  height: 95%;
+  top: 10px;
   left: -05px;
   background-color: var(--accent-color);
   z-index: -1;
