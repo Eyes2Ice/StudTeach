@@ -1,8 +1,12 @@
 @import url("./vars.css");
 
+/* Global */
 .body {
   background-color: var(--color-white);
   color: var(--color-black);
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .wrapper {
@@ -18,4 +22,80 @@
   height: 100%;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.button {
+  transition: var(--transition);
+}
+
+.button img {
+  transition: var(--transition);
+}
+
+.button:hover,
+.button:focus {
+  transform: scale(1.1);
+}
+
+.button:hover img,
+.button:focus img {
+  transform: rotate(45deg);
+}
+
+/* Header */
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px 0 60px;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.logo path {
+  transition: var(--transition);
+}
+
+.logo:hover path,
+.logo:focus path {
+  fill: var(--accent-color);
+}
+
+.header__menu {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.menu__link {
+  padding: 10px 0;
+  transition: var(--transition);
+}
+
+.menu__link:hover,
+.menu__link:focus {
+  color: var(--accent-color);
+}
+
+.header__btn {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  padding: 8px 5px 8px 60px;
+  border-radius: 27px;
+  background-color: var(--accent-color);
+  color: var(--color-white);
+  font-family: "Impact";
+  font-size: 20px;
+}
+
+.header__btn:hover,
+.header__btn:focus {
+  background-color: var(--color-black);
 }
