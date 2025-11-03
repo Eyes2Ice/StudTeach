@@ -18,13 +18,15 @@
 }
 
 .container {
-  max-width: 1330px;
+  max-width: 1390px;
   height: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .button {
+  background-color: var(--accent-color);
+  color: var(--color-white);
   transition: var(--transition);
 }
 
@@ -40,6 +42,30 @@
 .button:hover img,
 .button:focus img {
   transform: rotate(45deg);
+}
+
+.title {
+  font-family: "Impact";
+  font-size: 120px;
+}
+
+.title__accent {
+  position: relative;
+  color: var(--color-white);
+  font-weight: 400;
+}
+
+.title__accent::before {
+  content: "";
+  position: absolute;
+  width: 106%;
+  height: 110%;
+  top: 0;
+  left: -05px;
+  background-color: var(--accent-color);
+  z-index: -1;
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
 }
 
 /* Header */
