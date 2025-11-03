@@ -1,0 +1,21 @@
+@import url("./vars.css");
+
+.body {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1330px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}

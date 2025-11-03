@@ -1,0 +1,9 @@
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #1e1e1e;
+  --accent-color: #0049ff;
+
+  /* Transition */
+  --transition: all 0.4s;
+}
