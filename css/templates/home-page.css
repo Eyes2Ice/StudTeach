@@ -176,3 +176,61 @@
 .services__next:hover svg {
   fill: var(--accent-color);
 }
+
+/* Present */
+.present__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 121px;
+  padding: 133px 0 60px;
+  border-radius: 32px;
+  background-color: var(--color-black);
+}
+
+.present__inner::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 26%;
+  aspect-ratio: 1;
+  background: url(../../assets/img/decoration/present-ellipse.png) center center /
+    cover no-repeat;
+  border-radius: 32px;
+}
+
+.present__title {
+  max-width: 539px;
+  margin-bottom: 20px;
+  font-size: 70px;
+  line-height: 1.2;
+  color: var(--color-white);
+}
+
+.present__subtitle {
+  margin-bottom: 79px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-white);
+}
+
+.present__btn {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 10px 6px 10px 96px;
+  border-radius: 32px;
+  font-family: "Impact";
+  font-size: 28px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.present__btn img {
+  width: 56px;
+  aspect-ratio: 1;
+}
