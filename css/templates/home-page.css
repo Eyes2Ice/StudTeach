@@ -202,6 +202,17 @@
   border-radius: 32px;
 }
 
+.present__inner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  aspect-ratio: 1;
+  background: url(../../assets/img/decoration/Present.png) center center / cover
+    no-repeat;
+}
+
 .present__title {
   max-width: 539px;
   margin-bottom: 20px;
