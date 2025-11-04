@@ -49,13 +49,13 @@
   font-size: 120px;
 }
 
-.title__accent {
+.accent-text {
   position: relative;
   color: var(--color-white);
   font-weight: 400;
 }
 
-.title__accent::before {
+.accent-text::before {
   content: "";
   position: absolute;
   width: 106%;

@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 35px;
+  padding-bottom: 140px;
 }
 
 .hero__title {
@@ -35,7 +36,8 @@
   aspect-ratio: 1;
 }
 
-.hero__btn:hover {
+.hero__btn:hover,
+.hero__btn:focus {
   background-color: var(--color-black);
 }
 
@@ -79,4 +81,98 @@
   height: 19px;
   background: url(../../assets/img/decoration/Hero-underline.png) center center /
     cover no-repeat;
+}
+
+/* Services */
+.services__inner {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 120px;
+}
+
+.services__title {
+  margin-bottom: 36px;
+}
+
+.services__title b {
+  display: block;
+  text-align: end;
+  font-weight: 400;
+}
+
+.services__list {
+  max-width: 1351px;
+}
+
+.services__item {
+  padding: 20px 20px 24px;
+  background-color: var(--color-black);
+  border-radius: 32px;
+  box-shadow: 4px 4px 4px 0 rgba(30, 30, 30, 0.2);
+}
+
+.service__img {
+  margin-bottom: 12px;
+}
+
+.service__title {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+.service__term {
+  margin-bottom: 8px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.services__item .accent-text::before {
+  width: 30%;
+  height: 120%;
+  top: 0px;
+}
+
+.service__price {
+  margin-bottom: 26px;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-white);
+}
+
+.service__price strong {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.service__btn {
+  padding: 19px 74px;
+  border-radius: 22px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.services__nav {
+  display: flex;
+  align-self: flex-end;
+  gap: 25px;
+  margin-top: 28px;
+}
+
+.services__prev,
+.services__next {
+  transition: var(--transition);
+}
+
+.services__prev:hover,
+.services__next:hover {
+  transform: scale(1.1);
+}
+
+.services__prev:hover svg,
+.services__next:hover svg {
+  fill: var(--accent-color);
 }
