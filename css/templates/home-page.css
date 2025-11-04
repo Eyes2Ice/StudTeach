@@ -92,6 +92,7 @@
 
 .services__title {
   margin-bottom: 36px;
+  line-height: 1.2;
 }
 
 .services__title b {
@@ -168,12 +169,16 @@
 }
 
 .services__prev:hover,
-.services__next:hover {
+.services__next:hover,
+.services__prev:focus,
+.services__next:focus {
   transform: scale(1.1);
 }
 
 .services__prev:hover svg,
-.services__next:hover svg {
+.services__next:hover svg,
+.services__prev:focus svg,
+.services__next:focus svg {
   fill: var(--accent-color);
 }
 
@@ -188,27 +193,29 @@
   padding: 133px 0 60px;
   border-radius: 32px;
   background-color: var(--color-black);
+  z-index: 0;
 }
 
-.present__inner::before {
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 26%;
-  aspect-ratio: 1;
-  background: url(../../assets/img/decoration/present-ellipse.png) center center /
-    cover no-repeat;
-  border-radius: 32px;
-}
-
+.present__inner::before,
 .present__inner::after {
   content: "";
   position: absolute;
+  aspect-ratio: 1;
+  border-radius: 32px;
+}
+
+.present__inner::before {
+  top: 0%;
+  left: 0%;
+  width: 26%;
+  background: url(../../assets/img/decoration/present-ellipse.png) center center /
+    cover no-repeat;
+}
+
+.present__inner::after {
   bottom: 0;
   right: 0;
   width: 25%;
-  aspect-ratio: 1;
   background: url(../../assets/img/decoration/Present.png) center center / cover
     no-repeat;
 }
@@ -244,4 +251,114 @@
 .present__btn img {
   width: 56px;
   aspect-ratio: 1;
+}
+
+/* Advantages */
+.advantages__inner {
+  padding-bottom: 120px;
+}
+
+.advantages__title {
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.advantages__title b {
+  display: block;
+  font-weight: 400;
+  text-align: end;
+}
+
+.advantages__subtitle {
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.advantages__subtitle .accent-text::before {
+  width: 115%;
+  height: 80%;
+  top: 5px;
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 32px 23px;
+}
+
+.advantages__item {
+  position: relative;
+  max-width: 327px;
+  min-height: 326px;
+  padding: 25px 0 0 23px;
+  background: url("../../assets/img/decoration/advantage-black.png") center
+    center / 98% no-repeat;
+  z-index: -2;
+}
+
+.advantages__item::after {
+  content: "";
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  display: block;
+  background: url("../../assets/img/icons/Advantage-arrow-black.svg") center
+    center / 100% no-repeat;
+  width: 70px;
+  aspect-ratio: 1;
+}
+
+.advantages__item:nth-child(4) {
+  justify-self: end;
+}
+
+.advantages__item--blue {
+  background: url("../../assets/img/decoration/advantage-blue.png") center
+    center / 98% no-repeat;
+}
+
+.advantages__item--blue::after {
+  background: url("../../assets/img/icons/Advantage-arrow-blue.svg") center
+    center / 100% no-repeat;
+}
+
+.advantages__item--decorative {
+  background: url("../../assets/img/decoration/advantage-girl.png") center
+    center / 100% no-repeat;
+}
+
+.advantages__item--decorative::after {
+  display: none;
+}
+
+.advantage__title {
+  font-family: "Impact";
+  font-size: 38px;
+  color: var(--color-white);
+}
+
+.advantage__title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  margin: 8px 0 19px;
+  background-color: var(--color-white);
+}
+
+.advantage__text {
+  line-height: 1.5;
+  color: var(--color-white);
+}
+
+.advantage__text .accent-text::before {
+  width: 104%;
+  height: 120%;
+  top: 0px;
+}
+
+.advantages__item--blue .advantage__text .accent-text::before {
+  background-color: var(--color-black);
 }
