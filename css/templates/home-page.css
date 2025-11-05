@@ -362,3 +362,66 @@
 .advantages__item--blue .advantage__text .accent-text::before {
   background-color: var(--color-black);
 }
+
+/* Stages */
+.stages__inner {
+  position: relative;
+  margin-bottom: 120px;
+  padding: 50px 34px 80px;
+  background-color: var(--color-black);
+  border-radius: 32px;
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+/* .stages__inner::after {
+  content: "";
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  width: 35%;
+  aspect-ratio: 1;
+  background: url("../../assets/img/decoration/stages-ellipse.png") center
+    center / 100% no-repeat;
+  filter: blur(44.99999237060547px);
+} */
+
+.stages__title {
+  margin-bottom: 42px;
+  line-height: 1.1;
+}
+
+.stages__inner .accent-text {
+  z-index: 1;
+}
+
+.stages__list {
+  display: flex;
+  gap: 52px;
+}
+
+.stages__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 282px;
+  min-height: 240px;
+  padding: 20px;
+  background: url("../../assets/img/decoration/Stage.png") center center / cover
+    no-repeat;
+}
+
+.stage__number {
+  align-self: flex-end;
+  font-family: "Impact";
+  font-size: 36px;
+}
+
+.stage__text {
+  line-height: 1.5;
+}
+
+.stage__text .accent-text::before {
+  height: 100%;
+  top: 0px;
+}
