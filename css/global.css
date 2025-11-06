@@ -96,7 +96,7 @@
   gap: 20px;
   font-size: 20px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: var(--line-height);
 }
 
 .menu__link {
@@ -124,4 +124,135 @@
 .header__btn:hover,
 .header__btn:focus {
   background-color: var(--color-black);
+}
+
+/* Footer */
+.footer__inner {
+  margin-bottom: 60px;
+  padding: 45px 41px 51px 54px;
+  background-color: var(--color-black);
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 76px;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 100px;
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo {
+  margin-bottom: 6px;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 21px;
+}
+
+.footer__socials .socials__link path {
+  transition: var(--transition);
+}
+
+.footer__socials .socials__link:hover path,
+.footer__socials .socials__link:focus path {
+  fill: var(--accent-color);
+}
+
+.footer__btn {
+  margin-bottom: 15px;
+  padding: 13px 19px;
+  border-radius: 20px;
+  font-family: "Goldman";
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.footer__number {
+  margin-bottom: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.7;
+  transition: var(--transition);
+}
+
+.footer__number:hover,
+.footer__number:focus {
+  color: var(--accent-color);
+  transform: scale(1.2);
+}
+
+.footer__copyright {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 2;
+}
+
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: var(--line-height);
+}
+
+.footer__menu .menu__title {
+  font-weight: 700;
+}
+
+.footer__details {
+  margin-top: 40px;
+}
+
+.details__title {
+  margin-bottom: 5px;
+  font-family: "Impact";
+  line-height: 1.3;
+}
+
+.details__item {
+  font-size: 14px;
+  line-height: 1.7;
+  text-transform: lowercase;
+}
+
+.dev-by {
+  font-family: "Impact";
+  font-size: 20px;
+  line-height: var(--line-height);
+}
+
+.dev-by a {
+  transition: var(--transition);
+}
+
+.dev-by a:hover {
+  color: var(--accent-color);
+}
+
+.dev-by::after {
+  content: "";
+  display: block;
+  width: 204px;
+  height: 14px;
+  margin-top: 5px;
+  background: url(../assets/img/decoration/Footer-underline.png) center center /
+    cover no-repeat;
 }

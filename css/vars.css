@@ -6,4 +6,10 @@
 
   /* Transition */
   --transition: all 0.4s;
+
+  /* Line-height */
+  --line-height: 1.2;
+
+  /* Border-radius */
+  --border-radius: 32px;
 }

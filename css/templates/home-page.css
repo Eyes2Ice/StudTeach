@@ -10,7 +10,7 @@
 .hero__title {
   margin-bottom: 79px;
   font-size: 78px;
-  line-height: 1.2;
+  line-height: var(--line-height);
 }
 
 .hero__subtitle {
@@ -18,7 +18,7 @@
   margin-bottom: 26px;
   font-size: 28px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: var(--line-height);
 }
 
 .hero__btn {
@@ -26,7 +26,7 @@
   align-items: center;
   gap: 70px;
   padding: 10px 6px 10px 97px;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   font-family: "Impact";
   font-size: 24px;
 }
@@ -48,7 +48,7 @@
   padding: 80px 0 0 32px;
   background: url("../../assets/img/decoration/Hero.png") center center / cover
     no-repeat;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   color: var(--color-white);
   font-family: "Bebas Neue Cyrillic";
   font-size: 31px;
@@ -92,7 +92,7 @@
 
 .services__title {
   margin-bottom: 36px;
-  line-height: 1.2;
+  line-height: var(--line-height);
 }
 
 .services__title b {
@@ -108,7 +108,7 @@
 .services__item {
   padding: 20px 20px 24px;
   background-color: var(--color-black);
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   box-shadow: 4px 4px 4px 0 rgba(30, 30, 30, 0.2);
 }
 
@@ -121,13 +121,13 @@
   font-size: 20px;
   font-weight: 700;
   color: var(--color-white);
-  line-height: 1.2;
+  line-height: var(--line-height);
 }
 
 .service__term {
   margin-bottom: 8px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: var(--line-height);
 }
 
 .services__item .accent-text::before {
@@ -139,7 +139,7 @@
 .service__price {
   margin-bottom: 26px;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: var(--line-height);
   color: var(--color-white);
 }
 
@@ -153,7 +153,7 @@
   border-radius: 22px;
   font-size: 20px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: var(--line-height);
 }
 
 .services__nav {
@@ -191,7 +191,7 @@
   justify-content: center;
   margin-bottom: 121px;
   padding: 133px 0 60px;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   background-color: var(--color-black);
   z-index: 0;
 }
@@ -201,7 +201,7 @@
   content: "";
   position: absolute;
   aspect-ratio: 1;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
 }
 
 .present__inner::before {
@@ -224,7 +224,7 @@
   max-width: 539px;
   margin-bottom: 20px;
   font-size: 70px;
-  line-height: 1.2;
+  line-height: var(--line-height);
   color: var(--color-white);
 }
 
@@ -232,7 +232,7 @@
   margin-bottom: 79px;
   font-size: 24px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: var(--line-height);
   color: var(--color-white);
 }
 
@@ -241,10 +241,10 @@
   align-items: center;
   gap: 50px;
   padding: 10px 6px 10px 96px;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   font-family: "Impact";
   font-size: 28px;
-  line-height: 1.2;
+  line-height: var(--line-height);
   text-transform: uppercase;
 }
 
@@ -260,7 +260,7 @@
 
 .advantages__title {
   margin-bottom: 40px;
-  line-height: 1.2;
+  line-height: var(--line-height);
 }
 
 .advantages__title b {
@@ -273,7 +273,7 @@
   margin-bottom: 25px;
   font-weight: 600;
   font-size: 28px;
-  line-height: 1.2;
+  line-height: var(--line-height);
 }
 
 .advantages__subtitle .accent-text::before {
@@ -369,7 +369,7 @@
   margin-bottom: 120px;
   padding: 50px 34px 80px;
   background-color: var(--color-black);
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   color: var(--color-white);
   overflow: hidden;
 }
@@ -472,7 +472,7 @@
 .testimonial__title {
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: var(--line-height);
 }
 
 .testimonial__subtitle {
@@ -484,7 +484,7 @@
 
 .testimonial__text {
   font-size: 14px;
-  line-height: 1.2;
+  line-height: var(--line-height);
 }
 
 .testimonials__action {
@@ -500,7 +500,7 @@
   border-radius: 22px;
   font-size: 20px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: var(--line-height);
   transition: var(--transition);
 }
 
@@ -541,7 +541,7 @@
   margin-bottom: 120px;
   padding: 53px 48px 60px 59px;
   background-color: #161616;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   color: var(--color-white);
 }
 
@@ -605,7 +605,7 @@
   bottom: 0;
   left: 0;
   max-width: 100%;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
 }
 
 /* Contact */
@@ -628,7 +628,7 @@
 
 .contact__subtitle {
   font-size: 22px;
-  line-height: 1.2;
+  line-height: var(--line-height);
 }
 
 .contact__body {
@@ -740,6 +740,10 @@
 
 .form__checkbox {
   margin: 21px 0 37px;
+}
+
+.form__inputs a {
+  text-decoration: underline;
 }
 
 .form__btn {
