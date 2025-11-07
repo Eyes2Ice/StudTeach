@@ -1,5 +1,26 @@
 @import url("./global-media.css");
 
+@media (min-width: 1440px) {
+  /* Services */
+  .services__list {
+    max-width: 1350px;
+  }
+}
+
+@media (max-width: 1400px) {
+  /* Services */
+  .services__list {
+    max-width: 976px;
+  }
+}
+
+@media (max-width: 1000px) {
+  /* Services */
+  .services__list {
+    max-width: 650px;
+  }
+}
+
 @media (max-width: 900px) {
   /* Hero */
   .hero__inner {
@@ -12,16 +33,43 @@
     align-items: center;
     text-align: center;
   }
+
+  /* Services */
+  .services__nav {
+    align-self: center;
+  }
+
+  .services__title {
+    font-size: 72px;
+    text-align: center;
+  }
+
+  .services__title b {
+    text-align: center;
+  }
 }
 
 @media (max-width: 700px) {
   /* Hero */
+  .hero__inner {
+    padding-bottom: 84px;
+  }
+
   .hero__title {
     margin-bottom: 60px;
   }
 
   .hero__img {
     padding: 32px 0 0 32px;
+  }
+
+  /* Services */
+  .services__inner {
+    padding-bottom: 85px;
+  }
+
+  .services__list {
+    max-width: 312px;
   }
 }
 
@@ -45,7 +93,6 @@
 
 @media (max-width: 390px) {
   /* Hero */
-
   .hero__content {
     align-items: flex-start;
     text-align: start;
@@ -70,5 +117,30 @@
 
   .hero__btn img {
     width: 38px;
+  }
+
+  /* Services */
+  .services__title {
+    margin-bottom: 25px;
+    text-align: start;
+    font-size: 42px;
+  }
+
+  .services__title .accent-text::before {
+    top: 2px;
+  }
+
+  .services__title b {
+    text-align: end;
+  }
+
+  .services__nav {
+    gap: 20px;
+    margin-top: 9px;
+  }
+
+  .services__nav button svg {
+    width: 59px;
+    aspect-ratio: 1;
   }
 }

@@ -1,12 +1,35 @@
 // Слайдер услуг
 const swiper = new Swiper(".services__slider", {
-  spaceBetween: 34,
-  slidesPerView: 4,
+  slidesPerView: 1,
+  spaceBetween: 20,
 
   navigation: {
     nextEl: ".services__next",
     prevEl: ".services__prev",
   },
+
+  breakpoints: {
+    1439: {
+      slidesPerView: 4,
+      spaceBetween: 34,
+    },
+    999: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    700: {
+      slidesPerView: 2,
+      spaceBetween: 25,
+    },
+  },
+
+  autoplay: {
+    delay: 2000,
+  },
+
+  speed: 600,
+
+  pauseOnInteraction: true,
 });
 
 // Слайдер отзывов
