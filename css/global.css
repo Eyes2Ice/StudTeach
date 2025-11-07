@@ -57,6 +57,7 @@
   position: relative;
   color: var(--color-white);
   font-weight: 400;
+  z-index: 0;
 }
 
 .accent-text::before {
