@@ -52,3 +52,43 @@ accordionLists.forEach((el) => {
     accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
   });
 });
+
+// Бургер меню
+document.addEventListener("DOMContentLoaded", function () {
+  const burgerButton = document.querySelector(".header__burger");
+  const menuWrapper = document.querySelector(".header__wrapper");
+  const body = document.body;
+
+  if (burgerButton && menuWrapper) {
+    burgerButton.addEventListener("click", function () {
+      // Переключаем классы активности
+      burgerButton.classList.toggle("header__burger--active");
+      menuWrapper.classList.toggle("header__wrapper--active");
+      body.classList.toggle("body--menu-opened");
+    });
+
+    // Закрытие меню при клике на ссылку
+    const menuLinks = document.querySelectorAll(
+      ".menu__link, .header__btn--active"
+    );
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        burgerButton.classList.remove("header__burger--active");
+        menuWrapper.classList.remove("header__wrapper--active");
+        body.classList.remove("body--menu-opened");
+      });
+    });
+
+    // Закрытие меню при нажатии Escape
+    document.addEventListener("keydown", function (event) {
+      if (
+        event.key === "Escape" &&
+        menuWrapper.classList.contains("header__wrapper--active")
+      ) {
+        burgerButton.classList.remove("header__burger--active");
+        menuWrapper.classList.remove("header__wrapper--active");
+        body.classList.remove("body--menu-opened");
+      }
+    });
+  }
+});
