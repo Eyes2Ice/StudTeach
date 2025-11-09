@@ -43,6 +43,25 @@ new Swiper(".testimonials__slider", {
   },
 });
 
+// Слайдер преимуществ
+new Swiper(".advantages__slider", {
+  spaceBetween: 20,
+  slidesPerView: 1,
+
+  navigation: {
+    nextEl: ".advantages__next",
+    prevEl: ".advantages__prev",
+  },
+
+  // autoplay: {
+  //   delay: 2000,
+  // },
+
+  // speed: 600,
+
+  // pauseOnInteraction: true,
+});
+
 // Ответы на вопросы
 const accordionLists = document.querySelectorAll(".faq__list");
 

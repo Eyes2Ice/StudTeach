@@ -288,6 +288,10 @@
   gap: 32px 23px;
 }
 
+.advantages__list--slider {
+  display: none;
+}
+
 .advantages__item {
   position: relative;
   max-width: 327px;
@@ -314,12 +318,14 @@
   justify-self: end;
 }
 
-.advantages__item--blue {
+.advantages__item--blue,
+.advantages__list--slider .advantages__item:nth-child(2n) {
   background: url("../../assets/img/decoration/advantage-blue.png") center
     center / 98% no-repeat;
 }
 
-.advantages__item--blue::after {
+.advantages__item--blue::after,
+.advantages__list--slider .advantages__item:nth-child(2n)::after {
   background: url("../../assets/img/icons/Advantage-arrow-blue.svg") center
     center / 100% no-repeat;
 }
@@ -359,8 +365,35 @@
   top: 0px;
 }
 
-.advantages__item--blue .advantage__text .accent-text::before {
+.advantages__item--blue .advantage__text .accent-text::before,
+.advantages__list--slider
+  .advantages__item:nth-child(2n)
+  .advantage__text
+  .accent-text::before {
   background-color: var(--color-black);
+}
+
+.advantages__nav {
+  display: none;
+}
+
+.advantages__prev,
+.advantages__next {
+  transition: var(--transition);
+}
+
+.advantages__prev:hover,
+.advantages__next:hover,
+.advantages__prev:focus,
+.advantages__next:focus {
+  transform: scale(1.1);
+}
+
+.advantages__prev:hover svg,
+.advantages__next:hover svg,
+.advantages__prev:focus svg,
+.advantages__next:focus svg {
+  fill: var(--accent-color);
 }
 
 /* Stages */
