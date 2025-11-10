@@ -31,8 +31,21 @@
 }
 
 @media (max-width: 1300px) {
-}
+  /* FAQ */
+  .faq__inner {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .faq__heading {
+    align-self: flex-start;
+  }
+
+  .faq__list {
+    max-width: none;
+    z-index: 2;
+  }
+}
 @media (max-width: 1000px) {
   /* Services */
   .services__list {
@@ -112,6 +125,12 @@
     font-size: 72px;
     text-align: center;
   }
+
+  /* FAQ */
+  .faq__heading {
+    align-self: center;
+    text-align: center;
+  }
 }
 
 @media (max-width: 800px) {
@@ -123,6 +142,16 @@
   /* Stages */
   .stages__list {
     gap: 25px;
+  }
+
+  /* FAQ */
+  .faq__inner {
+    padding: 25px;
+  }
+
+  .faq-item__control {
+    padding: 9px 20px 9px 13px;
+    font-size: 24px;
   }
 }
 
@@ -262,6 +291,23 @@
   .stages__ellipse--mobile {
     display: block;
   }
+
+  /* FAQ */
+  .faq-item__control {
+    font-size: 20px;
+  }
+
+  .faq-item__content {
+    font-size: 18px;
+  }
+
+  .faq__ellipse {
+    display: none;
+  }
+
+  .faq__ellipse--mobile {
+    display: block;
+  }
 }
 
 @media (max-width: 500px) {
@@ -298,6 +344,28 @@
 
   .testimonials__btn {
     display: none;
+  }
+
+  /* FAQ */
+  .faq__inner {
+    padding: 31px 18px 44px 8px;
+  }
+
+  .faq__subtitle {
+    display: none;
+  }
+
+  .faq__list {
+    margin-top: 26px;
+  }
+
+  .faq__list .faq__item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .faq-item__control img {
+    width: 20px;
+    aspect-ratio: 1;
   }
 }
 
@@ -416,6 +484,10 @@
   }
 
   /* Stages */
+  .stages__inner {
+    margin-bottom: 84px;
+  }
+
   .stages__title {
     position: relative;
     margin-bottom: 34px;
@@ -429,6 +501,10 @@
   }
 
   /* Testimonials */
+  .testimonials__inner {
+    padding-bottom: 84px;
+  }
+
   .testimonials__title {
     margin-bottom: 18px;
     font-size: 53px;
@@ -458,5 +534,24 @@
   .testimonials__nav svg {
     width: 59px;
     aspect-ratio: 1;
+  }
+
+  /* FAQ */
+  .faq__inner {
+    gap: 0;
+    margin-bottom: 84px;
+  }
+
+  .faq__title {
+    font-size: 58px;
+    text-align: start;
+  }
+
+  .faq-item__control {
+    font-size: 14px;
+  }
+
+  .faq-item__content {
+    font-size: 12px;
   }
 }
