@@ -518,12 +518,13 @@
 
 .testimonials__title {
   align-self: flex-start;
+  width: 100%;
   margin-bottom: 40px;
   line-height: 1.1;
 }
 
 .testimonials__list {
-  max-width: 1250px;
+  max-width: 1252px;
   margin-bottom: 30px;
 }
 
