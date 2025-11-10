@@ -53,21 +53,51 @@ new Swiper(".advantages__slider", {
     prevEl: ".advantages__prev",
   },
 
-  // autoplay: {
-  //   delay: 2000,
-  // },
+  autoplay: {
+    delay: 2000,
+  },
 
-  // speed: 600,
+  speed: 600,
 
-  // pauseOnInteraction: true,
+  pauseOnInteraction: true,
 });
 
 // Ответы на вопросы
-const accordionLists = document.querySelectorAll(".faq__list");
+// const accordionLists = document.querySelectorAll(".faq__list");
 
-accordionLists.forEach((el) => {
-  el.addEventListener("click", (e) => {
-    const accordionList = e.currentTarget;
+// accordionLists.forEach((el) => {
+//   el.addEventListener("click", (e) => {
+//     const accordionList = e.currentTarget;
+//     const accordionControl = e.target.closest(".faq-item__control");
+//     if (!accordionControl) return;
+//     e.preventDefault();
+
+//     const accordionItem = accordionControl.parentElement;
+//     const accordionContent = accordionControl.nextElementSibling;
+//     const currentlyOpenedItem =
+//       accordionList.querySelector(".faq__item--opened");
+
+//     if (accordionItem.classList.contains("faq__item--opened")) {
+//       accordionItem.classList.remove("faq__item--opened");
+//       accordionContent.style.maxHeight = null;
+//       return;
+//     }
+
+//     if (currentlyOpenedItem && currentlyOpenedItem !== accordionItem) {
+//       const openedContent =
+//         currentlyOpenedItem.querySelector(".faq-item__content");
+//       currentlyOpenedItem.classList.remove("faq__item--opened");
+//       openedContent.style.maxHeight = null;
+//     }
+
+//     accordionItem.classList.add("faq__item--opened");
+//     accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+//   });
+// });
+
+// Ответы на вопросы
+function initAccordion(accordionList) {
+  accordionList.addEventListener("click", (e) => {
     const accordionControl = e.target.closest(".faq-item__control");
     if (!accordionControl) return;
     e.preventDefault();
@@ -93,7 +123,46 @@ accordionLists.forEach((el) => {
     accordionItem.classList.add("faq__item--opened");
     accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
   });
-});
+}
+
+// Этапы
+function initStageAccordion(accordionList) {
+  // Автоматически открываем первую вкладку при инициализации
+  const firstAccordionItem = accordionList.querySelector(".stage");
+  const firstAccordionControl =
+    firstAccordionItem?.querySelector(".stage__control");
+  const firstAccordionContent = firstAccordionControl?.nextElementSibling;
+
+  if (firstAccordionItem && firstAccordionControl && firstAccordionContent) {
+    firstAccordionItem.classList.add("stage--opened");
+    firstAccordionContent.style.maxHeight =
+      firstAccordionContent.scrollHeight + "px";
+  }
+
+  // Обработчик кликов
+  accordionList.addEventListener("click", (e) => {
+    const accordionControl = e.target.closest(".stage__control");
+    if (!accordionControl) return;
+    e.preventDefault();
+
+    const accordionItem = accordionControl.parentElement;
+    const accordionContent = accordionControl.nextElementSibling;
+
+    if (accordionItem.classList.contains("stage--opened")) {
+      accordionItem.classList.remove("stage--opened");
+      accordionContent.style.maxHeight = null;
+    } else {
+      accordionItem.classList.add("stage--opened");
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+    }
+  });
+}
+
+// Инициализация всех аккордеонов
+const accordionLists = document.querySelectorAll(".faq__list");
+accordionLists.forEach(initAccordion);
+const stageAccordions = document.querySelectorAll(".stages__list--accordion");
+stageAccordions.forEach(initStageAccordion);
 
 // Бургер меню
 document.addEventListener("DOMContentLoaded", function () {
