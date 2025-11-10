@@ -291,3 +291,7 @@
   background: url(../assets/img/decoration/Footer-underline.png) center center /
     cover no-repeat;
 }
+
+.dev-by--mobile {
+  display: none;
+}
