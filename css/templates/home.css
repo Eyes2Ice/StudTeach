@@ -797,6 +797,7 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
+  line-height: 1.2;
 }
 
 .form__input,
@@ -835,15 +836,12 @@
   margin: 35px 0 24px;
 }
 
-.form__checkbox {
-  margin: 21px 0 37px;
-}
-
 .form__inputs a {
   text-decoration: underline;
 }
 
 .form__btn {
+  margin-top: 39px;
   padding: 15px 38px 14px 28px;
   border-radius: 18px;
   font-size: 14px;
