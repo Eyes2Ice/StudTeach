@@ -109,6 +109,10 @@
   .footer__menu {
     margin-top: 0;
   }
+
+  .dev-by--mobile {
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 390px) {
