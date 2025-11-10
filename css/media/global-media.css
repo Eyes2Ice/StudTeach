@@ -55,6 +55,10 @@
     justify-content: space-between;
   }
 
+  .footer__menu {
+    text-align: center;
+  }
+
   .footer__details {
     text-align: center;
   }
