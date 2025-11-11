@@ -836,6 +836,10 @@
   margin: 35px 0 24px;
 }
 
+.form__inputs:last-child label {
+  font-size: 14px;
+}
+
 .form__inputs a {
   text-decoration: underline;
 }
