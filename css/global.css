@@ -307,7 +307,6 @@
   padding: 30px 101px 42px 104px;
   border-radius: 42px;
   text-align: center;
-  background-color: rgb(131, 230, 243);
 }
 
 .modal__title {
@@ -346,6 +345,10 @@
   font-size: 20px;
   font-weight: 600;
   line-height: var(--line-height);
+}
+
+.modal__subtitle .accent-text {
+  font-weight: 600;
 }
 
 .modal__subtitle .accent-text::before {
