@@ -1,6 +1,6 @@
 @media (max-width: 1200px) {
   /* Modal */
-  .modal {
+  .modal__wrapper {
     padding-inline: 45px;
   }
 }
@@ -90,7 +90,7 @@
   }
 
   /* Modal */
-  .modal {
+  .modal__wrapper {
     width: 85%;
   }
 
@@ -145,7 +145,7 @@
   }
 
   /* Modal */
-  .modal {
+  .modal__wrapper {
     max-width: 344px;
     width: 100%;
     padding: 14px 45px 21px 52px;

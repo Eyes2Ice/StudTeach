@@ -194,3 +194,46 @@ document.addEventListener("DOMContentLoaded", function () {
 const inputsTel = document.querySelectorAll('input[type="tel"]');
 let im = new Inputmask("+7 (999) 999-99-99");
 im.mask(inputsTel);
+
+// Модалка
+const modal = document.querySelector(".modal");
+const modalButtons = document.querySelectorAll(".button--open-modal"); // все кнопки
+
+modalButtons.forEach((btn) => {
+  btn.addEventListener("click", openModal);
+});
+
+if (modal) modal.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", (event) => {
+  if (
+    event.code === "Escape" &&
+    document.body.classList.contains("body--opened-modal")
+  ) {
+    document.body.classList.remove("body--opened-modal");
+  }
+});
+
+function openModal(e) {
+  e.preventDefault();
+  document.body.classList.add("body--opened-modal");
+}
+
+function closeModal(e) {
+  if (e) e.preventDefault();
+
+  const target = e ? e.target : null;
+
+  if (!target) {
+    document.body.classList.remove("body--opened-modal");
+    return;
+  }
+
+  if (
+    target.closest(".modal__close") ||
+    target.closest(".button") ||
+    target.classList.contains("modal")
+  ) {
+    document.body.classList.remove("body--opened-modal");
+  }
+}

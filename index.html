@@ -96,7 +96,7 @@
                 </ul>
                 <button
                   type="button"
-                  class="header__btn header__btn--active button"
+                  class="header__btn header__btn--active button button--open-modal"
                 >
                   Заказать звонок
                   <img src="./assets/img/icons/Arrow-out.svg" alt="" />
@@ -126,7 +126,7 @@
                 />
               </svg>
             </button>
-            <button type="button" class="header__btn button">
+            <button type="button" class="header__btn button button--open-modal">
               Заказать звонок
               <img src="./assets/img/icons/Arrow-out.svg" alt="" />
             </button>
@@ -134,7 +134,7 @@
         </div>
       </header>
       <main>
-        <!-- <section class="main__hero hero">
+        <section class="main__hero hero">
           <div class="container">
             <div class="hero__inner">
               <div class="hero__content">
@@ -145,7 +145,10 @@
                   Узнайте стоимость и срок выполнения вашей работы <br />за 3
                   минуты
                 </p>
-                <button type="button" class="hero__btn button">
+                <button
+                  type="button"
+                  class="hero__btn button button--open-modal"
+                >
                   узнать цену
                   <img src="./assets/img/icons/Arrow-out.svg" alt="" />
                 </button>
@@ -192,7 +195,10 @@
                     <h4 class="service__title">Контрольная работа</h4>
                     <p class="service__term accent-text">От 1 дня</p>
                     <p class="service__price">От <strong>790 ₽</strong></p>
-                    <button class="service__btn button" type="button">
+                    <button
+                      class="service__btn button button--open-modal"
+                      type="button"
+                    >
                       заказать
                     </button>
                   </li>
@@ -205,7 +211,10 @@
                     <h4 class="service__title">Контрольная работа</h4>
                     <p class="service__term accent-text">От 1 дня</p>
                     <p class="service__price">От <strong>790 ₽</strong></p>
-                    <button class="service__btn button" type="button">
+                    <button
+                      class="service__btn button button--open-modal"
+                      type="button"
+                    >
                       заказать
                     </button>
                   </li>
@@ -218,7 +227,10 @@
                     <h4 class="service__title">Контрольная работа</h4>
                     <p class="service__term accent-text">От 1 дня</p>
                     <p class="service__price">От <strong>790 ₽</strong></p>
-                    <button class="service__btn button" type="button">
+                    <button
+                      class="service__btn button button--open-modal"
+                      type="button"
+                    >
                       заказать
                     </button>
                   </li>
@@ -231,7 +243,10 @@
                     <h4 class="service__title">Контрольная работа</h4>
                     <p class="service__term accent-text">От 1 дня</p>
                     <p class="service__price">От <strong>790 ₽</strong></p>
-                    <button class="service__btn button" type="button">
+                    <button
+                      class="service__btn button button--open-modal"
+                      type="button"
+                    >
                       заказать
                     </button>
                   </li>
@@ -244,7 +259,10 @@
                     <h4 class="service__title">Контрольная работа</h4>
                     <p class="service__term accent-text">От 1 дня</p>
                     <p class="service__price">От 790 ₽</p>
-                    <button class="service__btn button" type="button">
+                    <button
+                      class="service__btn button button--open-modal"
+                      type="button"
+                    >
                       заказать
                     </button>
                   </li>
@@ -257,7 +275,10 @@
                     <h4 class="service__title">Контрольная работа</h4>
                     <p class="service__term accent-text">От 1 дня</p>
                     <p class="service__price">От 790 ₽</p>
-                    <button class="service__btn button" type="button">
+                    <button
+                      class="service__btn button button--open-modal"
+                      type="button"
+                    >
                       заказать
                     </button>
                   </li>
@@ -374,7 +395,7 @@
               <p class="present__subtitle">
                 Заполните форму и мы рассчитаем стоимость!
               </p>
-              <button class="present__btn button">
+              <button class="present__btn button button--open-modal">
                 рассчитать
                 <img src="./assets/img/icons/Arrow-out.svg" alt="" />
               </button>
@@ -1141,7 +1162,9 @@
                 </ul>
               </div>
               <div class="testimonials__action">
-                <button class="testimonials__btn button">заказать</button>
+                <button class="testimonials__btn button button--open-modal">
+                  заказать
+                </button>
                 <div class="testimonials__nav">
                   <button
                     class="testimonials__prev"
@@ -1720,8 +1743,8 @@
               </div>
             </div>
           </div>
-        </section> -->
-        <!-- <section class="main__contact contact">
+        </section>
+        <section class="main__contact contact">
           <div class="container">
             <div class="contact__inner">
               <div class="contact__heading">
@@ -1819,9 +1842,9 @@
               </div>
             </div>
           </div>
-        </section> -->
+        </section>
       </main>
-      <!-- <footer>
+      <footer>
         <div class="container">
           <div class="footer__inner">
             <div class="footer__content">
@@ -1927,7 +1950,9 @@
                       </a>
                     </li>
                   </ul>
-                  <button class="footer__btn button">заказать звонок</button>
+                  <button class="footer__btn button button--open-modal">
+                    заказать звонок
+                  </button>
                   <a
                     href="tel:+79999999999"
                     aria-label="Звонок в компанию"
@@ -2012,50 +2037,53 @@
             </div>
           </div>
         </div>
-      </footer> -->
+      </footer>
     </div>
-    <dialog class="modal" aria-label="Модальное окно с формой заявки" open>
-      <h3 class="modal__title">Отправить заявку</h3>
-      <button class="modal__close">
-        <svg
-          width="31"
-          height="31"
-          viewBox="0 0 31 31"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M15.414 0V30.8279M0 15.414H30.8279"
-            stroke="white"
-            stroke-width="1.92675"
-          />
-        </svg>
-      </button>
-      <p class="modal__subtitle">
-        <b class="accent-text">
-          Оставьте свой номер телефона, чтобы наш менеджер смог связаться с вами
-        </b>
-      </p>
-      <form action="mailto:drv-dev@mail.ru" class="modal__form">
-        <label>
-          <input name="name" type="text" required / placeholder="Ваше имя"
-          class="modal__input">
-        </label>
-        <label>
-          <input name="tel" type="tel" required / placeholder="Ваш номер"
-          class="modal__input">
-        </label>
-        <label>
-          <input class="modal__checkbox" type="checkbox" required />
-          <span
-            >Даю соглашение на обработку
-            <a href="#">персональных данных</a></span
+    <div class="modal">
+      <div class="modal__wrapper">
+        <h3 class="modal__title">Отправить заявку</h3>
+        <button class="modal__close" aria-label="Закрыть модальное окно">
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            xmlns="http://www.w3.org/2000/svg"
           >
-        </label>
-        <button class="modal__btn button" type="submit">
-          Отправить заявку
+            <path
+              d="M15.414 0V30.8279M0 15.414H30.8279"
+              stroke="white"
+              stroke-width="1.92675"
+            />
+          </svg>
         </button>
-      </form>
-    </dialog>
+        <p class="modal__subtitle">
+          <b class="accent-text">
+            Оставьте свой номер телефона, чтобы наш менеджер смог связаться с
+            вами
+          </b>
+        </p>
+        <form action="mailto:drv-dev@mail.ru" class="modal__form">
+          <label>
+            <input name="name" type="text" required / placeholder="Ваше имя"
+            class="modal__input">
+          </label>
+          <label>
+            <input name="tel" type="tel" required / placeholder="Ваш номер"
+            class="modal__input">
+          </label>
+          <label>
+            <input class="modal__checkbox" type="checkbox" required />
+            <span
+              >Даю соглашение на обработку
+              <a href="#">персональных данных</a></span
+            >
+          </label>
+          <button class="modal__btn button" type="submit">
+            Отправить заявку
+          </button>
+        </form>
+      </div>
+    </div>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/inputmask.min.js"></script>
     <script src="./js/main.js"></script>
