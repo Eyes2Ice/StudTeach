@@ -13,6 +13,18 @@
     <link rel="stylesheet" href="./css/media/home-media.css" />
   </head>
   <body class="body">
+    <div id="preloader" class="preloader" aria-hidden="false">
+      <div class="preloader__inner">
+        <div class="book">
+          <div class="inner">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+          </div>
+          <ul class="pages"></ul>
+        </div>
+      </div>
+    </div>
     <div class="wrapper">
       <header class="header">
         <div class="container">
@@ -85,7 +97,7 @@
               <div class="header__wrapper">
                 <ul class="header__menu menu">
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Главная</a>
+                    <a href="/" class="menu__link">Главная</a>
                   </li>
                   <li class="menu__item">
                     <a href="#" class="menu__link">О нас</a>
@@ -2091,4 +2103,5 @@
     <script src="./js/inputmask.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
+  <div id="root"></div>
 </html>

@@ -1,4 +1,5 @@
 @import url("./vars.css");
+@import url("./preloader.css");
 
 /* Global */
 .body {
@@ -8,6 +9,12 @@
   font-weight: 400;
   font-size: 18px;
 }
+
+.body--preload {
+  overflow: hidden;
+}
+
+
 
 .body--menu-opened {
   overflow: hidden;
@@ -22,7 +29,8 @@
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  width: calc(var(--wrapper-width) * 1px);
+  /* width: calc(var(--wrapper-width) * 1px); */
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -326,7 +334,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(var(--modal-width) * 1px);
+  /* width: calc(var(--modal-width) * 1px); */
   padding: 30px 101px 42px 104px;
   border-radius: 42px;
   text-align: center;
