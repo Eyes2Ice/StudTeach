@@ -19,11 +19,12 @@
 }
 
 .wrapper {
-  min-height: 100%;
-  width: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  min-height: 100%;
+  width: calc(var(--wrapper-width) * 1px);
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .container {
@@ -325,6 +326,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: calc(var(--modal-width) * 1px);
   padding: 30px 101px 42px 104px;
   border-radius: 42px;
   text-align: center;

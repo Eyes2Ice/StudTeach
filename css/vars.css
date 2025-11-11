@@ -12,4 +12,8 @@
 
   /* Border-radius */
   --border-radius: 32px;
+
+  /* Base-width */
+  --wrapper-width: 1880px;
+  --modal-width: 684px;
 }

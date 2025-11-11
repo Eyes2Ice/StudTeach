@@ -1,3 +1,13 @@
+@media (min-width: 1881px) {
+  .wrapper {
+    zoom: calc(100vw / var(--wrapper-width));
+  }
+
+  .modal__wrapper {
+    zoom: calc(35vw / var(--modal-width));
+  }
+}
+
 @media (max-width: 1200px) {
   /* Modal */
   .modal__wrapper {
