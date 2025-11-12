@@ -32,9 +32,6 @@
   position: relative;
   margin: 32px 0 0 0;
   zoom: 1.5;
-  /* Исправление для Safari */
-  perspective: 1000px;
-  -webkit-perspective: 1000px;
 }
 .preloader .book .inner {
   width: 32px;
@@ -43,9 +40,6 @@
   transform-origin: 2px 2px;
   transform: rotateZ(-90deg);
   animation: book var(--duration) ease infinite;
-  /* Исправление для Safari */
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
 }
 .preloader .book .left,
 .preloader .book .right {
@@ -101,103 +95,80 @@
   height: 4px;
   border-radius: 2px;
   transform-origin: 100% 2px;
-  -webkit-transform-origin: 100% 2px;
   width: 48px;
   right: 0;
   top: -10px;
   position: absolute;
   background: var(--color);
   transform: rotateZ(0deg) translateX(-18px);
-  -webkit-transform: rotateZ(0deg) translateX(-18px);
   animation-duration: var(--duration);
   animation-timing-function: ease;
   animation-iteration-count: infinite;
-  /* Исправление для Safari */
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
 }
 
 @keyframes left {
   4% {
     transform: rotateZ(90deg);
-    -webkit-transform: rotateZ(90deg);
   }
   10%,
   40% {
     transform: rotateZ(0deg);
-    -webkit-transform: rotateZ(0deg);
   }
   46%,
   54% {
     transform: rotateZ(90deg);
-    -webkit-transform: rotateZ(90deg);
   }
   60%,
   90% {
     transform: rotateZ(0deg);
-    -webkit-transform: rotateZ(0deg);
   }
   96% {
     transform: rotateZ(90deg);
-    -webkit-transform: rotateZ(90deg);
   }
 }
 @keyframes right {
   4% {
     transform: rotateZ(-90deg);
-    -webkit-transform: rotateZ(-90deg);
   }
   10%,
   40% {
     transform: rotateZ(0deg);
-    -webkit-transform: rotateZ(0deg);
   }
   46%,
   54% {
     transform: rotateZ(-90deg);
-    -webkit-transform: rotateZ(-90deg);
   }
   60%,
   90% {
     transform: rotateZ(0deg);
-    -webkit-transform: rotateZ(0deg);
   }
   96% {
     transform: rotateZ(-90deg);
-    -webkit-transform: rotateZ(-90deg);
   }
 }
 @keyframes book {
   4% {
     transform: rotateZ(-90deg);
-    -webkit-transform: rotateZ(-90deg);
   }
   10%,
   40% {
     transform: rotateZ(0deg);
-    -webkit-transform: rotateZ(0deg);
     transform-origin: 2px 2px;
-    -webkit-transform-origin: 2px 2px;
   }
   40.01%,
   59.99% {
     transform-origin: 30px 2px;
-    -webkit-transform-origin: 30px 2px;
   }
   46%,
   54% {
     transform: rotateZ(90deg);
-    -webkit-transform: rotateZ(90deg);
   }
   60%,
   90% {
     transform: rotateZ(0deg);
-    -webkit-transform: rotateZ(0deg);
     transform-origin: 2px 2px;
-    -webkit-transform-origin: 2px 2px;
   }
   96% {
     transform: rotateZ(-90deg);
-    -webkit-transform: rotateZ(-90deg);
   }
 }
