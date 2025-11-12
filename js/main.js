@@ -220,20 +220,19 @@ function openModal(e) {
 }
 
 function closeModal(e) {
-  if (e) e.preventDefault();
-
-  const target = e ? e.target : null;
-
-  if (!target) {
+  if (!e) {
     document.body.classList.remove("body--opened-modal");
     return;
   }
+
+  const target = e.target;
 
   if (
     target.closest(".modal__close") ||
     target.closest(".button") ||
     target.classList.contains("modal")
   ) {
+    e.preventDefault(); // ← переместили сюда
     document.body.classList.remove("body--opened-modal");
   }
 }

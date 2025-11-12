@@ -1,98 +1,54 @@
-/* Hero */
-.hero__inner {
+/* Article */
+.article__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 54px 0 120px;
-  padding-top: 54px;
-}
-
-.hero__title {
-  max-width: 772px;
-  margin-bottom: 36px;
-  font-size: 92px;
-  line-height: var(--line-height);
-  text-align: center;
-}
-
-.hero__subtitle {
-  margin-bottom: 141px;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: var(--line-height);
-}
-
-.hero__subtitle .accent-text::before {
-  width: 105%;
-  height: 120%;
-  top: -3px;
-}
-
-.articles {
-  display: flex;
-  justify-content: center;
-  gap: 60px 34px;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: 60px;
-}
-
-.articles__item {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-  max-width: 500px;
-  padding: 20px 20px 36px 20px;
-  border-radius: var(--border-radius);
-  background-color: var(--color-black);
-  color: var(--color-white);
-}
-
-.article__img {
-  margin-bottom: 8px;
-}
-
-.article__date {
-  margin-bottom: 6px;
-  font-weight: 600;
-  line-height: var(--line-height);
-}
-
-.article__date .accent-text::before {
-  top: 2px;
-}
-
-.article__link {
-  transition: var(--transition);
-}
-
-.article__link:hover {
-  color: var(--accent-color);
 }
 
 .article__title {
-  margin: 0 0 12px 6px;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 92px;
   line-height: var(--line-height);
+  margin-bottom: 73px;
 }
 
-.article__text {
-  max-width: 260px;
-  line-height: var(--line-height);
+.article__title:before,
+.article__title:after {
+  content: "";
+  display: inline-block;
+  width: 43px;
+  height: 35px;
 }
 
-.hero__btn {
-  padding: 19px 49px;
-  border-radius: 22px;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: var(--line-height);
+.article__title:before {
+  margin-right: 27px;
+  background-image: url(../../assets/img/icons/Quotes.svg);
+  vertical-align: top;
 }
 
-.hero__btn:hover,
-.hero__btn:focus {
+.article__title:after {
+  margin: 0 0 -15px 15px;
+  background-image: url(../../assets/img/icons/Quotes.svg);
+  transform: rotate(180deg);
+  vertical-align: bottom;
+}
+
+.article__img {
+  margin-bottom: 73px;
+  border-radius: var(--border-radius);
+}
+
+.article__img img {
+  width: 100%;
+}
+
+.article__content {
+  margin-bottom: 93px;
+  padding: 52px 54px 59px 52px;
   background-color: var(--color-black);
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+  font-size: 22px;
+  line-height: var(--line-height);
 }
 
 /* Contact */
