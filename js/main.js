@@ -239,184 +239,66 @@ function closeModal(e) {
 }
 
 // Прелоадер
-// (function () {
-//   var PAGES = 18;
-//   var DURATION = 6.8;
-//   var bookSelector = "#preloader .book";
-//   var pagesContainerSelector = "#preloader .book ul.pages";
-//   var preloaderSelector = "#preloader";
-
-//   function generatePageKeyframes(index) {
-//     var delay = index * 1.86;
-//     var delayAfter = index * 1.74;
-
-//     function fmt(n) {
-//       return (Math.round(n * 1000) / 1000).toString();
-//     }
-
-//     var p1 = fmt(4 + delay);
-//     var p2 = fmt(13 + delayAfter);
-//     var p3 = fmt(54 + delay);
-//     var p4 = fmt(63 + delayAfter);
-
-//     return (
-//       "\
-// @keyframes pageAnim" +
-//       index +
-//       " { \
-//   " +
-//       p1 +
-//       "% { transform: rotateZ(0deg) translateX(-18px); } \
-//   " +
-//       p2 +
-//       "%, " +
-//       p3 +
-//       "% { transform: rotateZ(180deg) translateX(-18px); } \
-//   " +
-//       p4 +
-//       "% { transform: rotateZ(0deg) translateX(-18px); } \
-// }"
-//     );
-//   }
-
-//   function injectKeyframes() {
-//     var style = document.createElement("style");
-//     style.type = "text/css";
-
-//     var css = "";
-//     for (var i = 0; i < PAGES; i++) {
-//       css += generatePageKeyframes(i) + "\n";
-//     }
-//     style.appendChild(document.createTextNode(css));
-//     document.head.appendChild(style);
-//   }
-
-//   function buildPages() {
-//     var ul = document.querySelector(pagesContainerSelector);
-//     if (!ul) return;
-
-//     ul.innerHTML = "";
-
-//     for (var i = 0; i < PAGES; i++) {
-//       var li = document.createElement("li");
-//       li.style.animationName = "pageAnim" + i;
-//       li.style.animationDuration = DURATION + "s";
-//       li.style.animationTimingFunction = "ease";
-//       li.style.animationIterationCount = "infinite";
-//       ul.appendChild(li);
-//     }
-//   }
-
-//   function setupHideLogic() {
-//     var preloader = document.querySelector(preloaderSelector);
-//     if (!preloader) return;
-
-//     var MIN_SHOW = 350; // ms
-//     var startTime = Date.now();
-
-//     window.addEventListener("load", function () {
-//       var elapsed = Date.now() - startTime;
-//       var delay = Math.max(0, MIN_SHOW - elapsed);
-
-//       setTimeout(function () {
-//         preloader.classList.add("preloader--hidden");
-//         document.body.classList.remove("body--preload");
-
-//         function onEnd(e) {
-//           if (e.propertyName === "opacity") {
-//             preloader.removeEventListener("transitionend", onEnd);
-//             if (preloader.parentNode)
-//               preloader.parentNode.removeChild(preloader);
-//           }
-//         }
-//         preloader.addEventListener("transitionend", onEnd);
-
-//         setTimeout(function () {
-//           if (preloader.parentNode) preloader.parentNode.removeChild(preloader);
-//         }, 800);
-//       }, delay);
-//     });
-//   }
-
-//   if (!document.body.classList.contains("body--preload")) {
-//     document.body.classList.add("body--preload");
-//   }
-
-//   injectKeyframes();
-//   buildPages();
-//   setupHideLogic();
-// })();
-
-// preloader-book.js
 (function () {
-  // ====== Настройки ======
-  var PAGES = 18; // количество "листов"
-  var DURATION = 6.8; // длительность цикла, секунды (как в CSS var --duration)
-  var MIN_SHOW_MS = 350; // минимальное время показа прелоадера (мс)
-  var PRELOADER_SELECTOR = "#site-preloader";
-  var PAGES_UL_SELECTOR = "#site-preloader .book ul.pages";
-
-  // ====== Вспомогательные функции ======
-  function createStyle(cssText) {
-    var el = document.createElement("style");
-    el.type = "text/css";
-    el.appendChild(document.createTextNode(cssText));
-    document.head.appendChild(el);
-    return el;
-  }
-
-  function fmt(n) {
-    // формат процентов с 3 знаками после запятой, удаляем лишние нули
-    return (Math.round(n * 1000) / 1000).toString();
-  }
+  var PAGES = 18;
+  var DURATION = 6.8;
+  var bookSelector = "#preloader .book";
+  var pagesContainerSelector = "#preloader .book ul.pages";
+  var preloaderSelector = "#preloader";
 
   function generatePageKeyframes(index) {
-    // Original delays from CodePen: delay = i * 1.86, delayAfter = i * 1.74
     var delay = index * 1.86;
     var delayAfter = index * 1.74;
 
-    // keyframe percentages
+    function fmt(n) {
+      return (Math.round(n * 1000) / 1000).toString();
+    }
+
     var p1 = fmt(4 + delay);
     var p2 = fmt(13 + delayAfter);
     var p3 = fmt(54 + delay);
     var p4 = fmt(63 + delayAfter);
 
-    // note: we use translate3d to force GPU & more consistent behaviour on iOS
-    var css =
-      "" +
-      "@keyframes pageAnim" +
+    return (
+      "\
+@keyframes pageAnim" +
       index +
-      " {" +
+      " { \
+  " +
       p1 +
-      "% { transform: rotateZ(0deg) translate3d(-18px,0,0); } " +
+      "% { transform: rotateZ(0deg) translateX(-18px); } \
+  " +
       p2 +
       "%, " +
       p3 +
-      "% { transform: rotateZ(180deg) translate3d(-18px,0,0); } " +
+      "% { transform: rotateZ(180deg) translateX(-18px); } \
+  " +
       p4 +
-      "% { transform: rotateZ(0deg) translate3d(-18px,0,0); } " +
-      "}";
-    return css;
+      "% { transform: rotateZ(0deg) translateX(-18px); } \
+}"
+    );
   }
 
-  // inject generated keyframes for all pages
-  function injectAllKeyframes() {
+  function injectKeyframes() {
+    var style = document.createElement("style");
+    style.type = "text/css";
+
     var css = "";
     for (var i = 0; i < PAGES; i++) {
       css += generatePageKeyframes(i) + "\n";
     }
-    createStyle(css);
+    style.appendChild(document.createTextNode(css));
+    document.head.appendChild(style);
   }
 
-  // build <li> elements and set animation-name for each
   function buildPages() {
-    var ul = document.querySelector(PAGES_UL_SELECTOR);
+    var ul = document.querySelector(pagesContainerSelector);
     if (!ul) return;
 
     ul.innerHTML = "";
+
     for (var i = 0; i < PAGES; i++) {
       var li = document.createElement("li");
-      // set inline animation properties (fallback)
       li.style.animationName = "pageAnim" + i;
       li.style.animationDuration = DURATION + "s";
       li.style.animationTimingFunction = "ease";
@@ -425,50 +307,42 @@ function closeModal(e) {
     }
   }
 
-  // hide logic: wait for window.load and MIN_SHOW_MS then hide smoothly
-  function setupHide(preloader) {
+  function setupHideLogic() {
+    var preloader = document.querySelector(preloaderSelector);
     if (!preloader) return;
-    var start = Date.now();
+
+    var MIN_SHOW = 350; // ms
+    var startTime = Date.now();
 
     window.addEventListener("load", function () {
-      var elapsed = Date.now() - start;
-      var wait = Math.max(0, MIN_SHOW_MS - elapsed);
+      var elapsed = Date.now() - startTime;
+      var delay = Math.max(0, MIN_SHOW - elapsed);
 
       setTimeout(function () {
-        // add hidden class to trigger CSS transition
-        preloader.classList.add("site-preloader--hidden");
-        // remove body preload-lock class
+        preloader.classList.add("preloader--hidden");
         document.body.classList.remove("body--preload");
 
-        // remove element after transitionend on opacity
-        function onTransition(e) {
+        function onEnd(e) {
           if (e.propertyName === "opacity") {
-            preloader.removeEventListener("transitionend", onTransition);
+            preloader.removeEventListener("transitionend", onEnd);
             if (preloader.parentNode)
               preloader.parentNode.removeChild(preloader);
           }
         }
-        preloader.addEventListener("transitionend", onTransition);
+        preloader.addEventListener("transitionend", onEnd);
 
-        // fallback: remove after 900ms
         setTimeout(function () {
           if (preloader.parentNode) preloader.parentNode.removeChild(preloader);
-        }, 900);
-      }, wait);
+        }, 800);
+      }, delay);
     });
   }
 
-  // Ensure body has class to block scroll BEFORE scripts run (if not present, we add)
   if (!document.body.classList.contains("body--preload")) {
     document.body.classList.add("body--preload");
   }
 
-  // Run initializers
-  injectAllKeyframes();
+  injectKeyframes();
   buildPages();
-  var pre = document.querySelector(PRELOADER_SELECTOR);
-  setupHide(pre);
-
-  // optional: expose for debugging (remove in production)
-  // window.__preloader = { rebuild: function(){ injectAllKeyframes(); buildPages(); } };
+  setupHideLogic();
 })();
