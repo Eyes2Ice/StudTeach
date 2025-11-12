@@ -101,12 +101,14 @@
   height: 4px;
   border-radius: 2px;
   transform-origin: 100% 2px;
+  -webkit-transform-origin: 100% 2px;
   width: 48px;
   right: 0;
   top: -10px;
   position: absolute;
   background: var(--color);
   transform: rotateZ(0deg) translateX(-18px);
+  -webkit-transform: rotateZ(0deg) translateX(-18px);
   animation-duration: var(--duration);
   animation-timing-function: ease;
   animation-iteration-count: infinite;
