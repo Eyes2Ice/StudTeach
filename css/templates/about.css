@@ -1,0 +1,448 @@
+/* Hero */
+.main__hero {
+}
+
+.hero__inner {
+  position: relative;
+  height: 600px;
+  margin-bottom: 120px;
+  padding: 37px 0 0 50px;
+  background-color: var(--color-black);
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+}
+
+.hero__inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 50%;
+  height: 85%;
+  background: url("../../assets/img/decoration/hero-ellipse.svg") center center /
+    cover no-repeat;
+  border-radius: var(--border-radius);
+}
+
+.hero__title {
+  font-size: 180px;
+  line-height: var(--line-height);
+}
+
+.hero__text {
+  max-width: 550px;
+  font-size: 22px;
+  line-height: var(--line-height);
+}
+
+.hero__ellipse {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  max-width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.hero__ellipse--mobile {
+  display: none;
+}
+
+/* About */
+.about__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 44px;
+  padding-bottom: 113px;
+}
+
+.about__title {
+  margin-bottom: 9px;
+  line-height: var(--line-height);
+}
+
+.about__title .accent-text::before {
+  width: 103%;
+  height: 90%;
+  top: 5px;
+}
+
+.about__text {
+  max-width: 596px;
+  font-size: 22px;
+  line-height: var(--line-height);
+}
+
+.about__img img {
+  width: 100%;
+}
+
+/* Advantages */
+.advantages__inner {
+  padding-bottom: 120px;
+}
+
+.advantages__title {
+  margin-bottom: 40px;
+  line-height: var(--line-height);
+}
+
+.advantages__title b {
+  display: block;
+  font-weight: 400;
+  text-align: end;
+}
+
+.advantages__subtitle {
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: var(--line-height);
+}
+
+.advantages__subtitle .accent-text::before {
+  width: 115%;
+  height: 80%;
+  top: 5px;
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 32px 23px;
+}
+
+.advantages__list--slider {
+  display: none;
+}
+
+.advantages__item {
+  position: relative;
+  max-width: 327px;
+  min-height: 326px;
+  padding: 25px 0 0 23px;
+  background: url("../../assets/img/decoration/advantage-black.png") center
+    center / 98% no-repeat;
+  z-index: -2;
+}
+
+.advantages__item::after {
+  content: "";
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  display: block;
+  background: url("../../assets/img/icons/Advantage-arrow-black.svg") center
+    center / 100% no-repeat;
+  width: 70px;
+  aspect-ratio: 1;
+}
+
+.advantages__item:nth-child(4) {
+  justify-self: end;
+}
+
+.advantages__item--blue,
+.advantages__list--slider .advantages__item:nth-child(2n) {
+  background: url("../../assets/img/decoration/advantage-blue.png") center
+    center / 98% no-repeat;
+}
+
+.advantages__item--blue::after,
+.advantages__list--slider .advantages__item:nth-child(2n)::after {
+  background: url("../../assets/img/icons/Advantage-arrow-blue.svg") center
+    center / 100% no-repeat;
+}
+
+.advantages__item--decorative {
+  background: url("../../assets/img/decoration/advantage-girl.png") center
+    center / 100% no-repeat;
+}
+
+.advantages__item--decorative::after {
+  display: none;
+}
+
+.advantage__title {
+  font-family: "Impact";
+  font-size: 38px;
+  color: var(--color-white);
+}
+
+.advantage__title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  margin: 8px 0 19px;
+  background-color: var(--color-white);
+}
+
+.advantage__text {
+  line-height: 1.5;
+  color: var(--color-white);
+}
+
+.advantage__text .accent-text::before {
+  width: 104%;
+  height: 120%;
+  top: 0px;
+}
+
+.advantages__item--blue .advantage__text .accent-text::before,
+.advantages__list--slider
+  .advantages__item:nth-child(2n)
+  .advantage__text
+  .accent-text::before {
+  background-color: var(--color-black);
+}
+
+.advantages__nav {
+  display: none;
+}
+
+.advantages__prev,
+.advantages__next {
+  transition: var(--transition);
+}
+
+.advantages__prev:hover,
+.advantages__next:hover,
+.advantages__prev:focus,
+.advantages__next:focus {
+  transform: scale(1.1);
+}
+
+.advantages__prev:hover svg,
+.advantages__next:hover svg,
+.advantages__prev:focus svg,
+.advantages__next:focus svg {
+  fill: var(--accent-color);
+}
+
+/* Announcement */
+.announcement__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 120px;
+  padding: 94px 235px 60px;
+  border-radius: var(--border-radius);
+  background-color: var(--color-black);
+  z-index: 0;
+  text-align: center;
+}
+
+.announcement__inner::before,
+.announcement__inner::after {
+  content: "";
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: var(--border-radius);
+}
+
+.announcement__inner::before {
+  top: 0%;
+  left: 0%;
+  width: 26%;
+  background: url(../../assets/img/decoration/present-ellipse.png) center center /
+    cover no-repeat;
+}
+
+.announcement__inner::after {
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  background: url(../../assets/img/decoration/Spaceship.png) center center /
+    cover no-repeat;
+}
+
+.announcement__title {
+  max-width: 884px;
+  margin-bottom: 28px;
+  font-size: 70px;
+  line-height: var(--line-height);
+  color: var(--color-white);
+  z-index: 1;
+}
+
+.announcement__subtitle {
+  max-width: 769px;
+  margin-bottom: 81px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: var(--line-height);
+  color: var(--color-white);
+}
+
+.announcement__btn {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 10px 6px 10px 96px;
+  border-radius: var(--border-radius);
+  font-family: "Impact";
+  font-size: 28px;
+  line-height: var(--line-height);
+  text-transform: uppercase;
+}
+
+.announcement__btn img {
+  width: 56px;
+  aspect-ratio: 1;
+}
+
+/* Contact */
+.contact__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 29px;
+  padding-bottom: 125px;
+}
+
+.contact__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1265px;
+  width: 100%;
+}
+
+.contact__subtitle {
+  font-size: 22px;
+  line-height: var(--line-height);
+}
+
+.contact__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+}
+
+.contact__img {
+  max-width: 611px;
+}
+
+.contact__img img {
+  width: 100%;
+}
+
+.contact__form {
+  max-width: 566px;
+}
+
+.form__title {
+  margin-bottom: 8px;
+  font-family: "Impact";
+  font-size: 36px;
+  color: #1a1a1a;
+}
+
+.form__subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.form__subtitle::after {
+  content: "";
+  width: 167px;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+.form__socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 19px;
+}
+
+.form__socials svg,
+.form__socials path {
+  transition: var(--transition);
+}
+
+.form__socials .socials__link:hover svg,
+.form__socials .socials__link:focus svg {
+  transform: scale(1.2);
+}
+
+.form__socials .socials__link:hover path,
+.form__socials .socials__link:focus path {
+  fill: var(--accent-color);
+}
+
+.form__inputs {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  line-height: 1.2;
+}
+
+.form__input,
+.form__textarea {
+  border: 1px solid #1a1a1a;
+  border-radius: 18px;
+  padding: 16px 25px;
+  transition: var(--transition);
+}
+
+.form__input:hover,
+.form__textarea:hover {
+  border-color: var(--accent-color);
+  cursor: pointer;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+  font-size: 12px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.form__input {
+  min-width: 270px;
+}
+
+.contact__textarea {
+  width: 100%;
+}
+
+.form__textarea {
+  max-width: 564px;
+  width: 100%;
+  min-height: 161px;
+  margin: 35px 0 24px;
+}
+
+.form__inputs:last-child label {
+  font-size: 14px;
+}
+
+.form__inputs a {
+  text-decoration: underline;
+}
+
+.form__btn {
+  margin-top: 39px;
+  padding: 15px 38px 14px 28px;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form__btn:hover,
+.form__btn:focus {
+  background-color: var(--color-black);
+}
