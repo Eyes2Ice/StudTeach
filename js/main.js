@@ -345,3 +345,28 @@ function closeModal(e) {
   buildPages();
   setupHideLogic();
 })();
+
+const BASE_WIDTH = 1880;
+const wrapper = document.getElementById("wrapper");
+
+function applyScale() {
+  let scale = window.innerWidth / BASE_WIDTH;
+
+  // Если экран меньше 1880 — НЕ масштабируем, даём обычный адаптив
+  if (window.innerWidth <= BASE_WIDTH) {
+    wrapper.style.transform = "none";
+    wrapper.style.width = "100%";
+    document.body.style.width = "100%";
+    return;
+  }
+
+  // Если шире — масштабируем вниз (чтобы выглядело как 1440)
+  wrapper.style.transform = `scale(${scale})`;
+  wrapper.style.width = BASE_WIDTH + "px";
+
+  // Чтобы не было белых полей справа
+  document.body.style.width = BASE_WIDTH * scale + "px";
+}
+
+window.addEventListener("resize", applyScale);
+applyScale();

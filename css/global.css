@@ -2,6 +2,14 @@
 @import url("./preloader.css");
 
 /* Global */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .body {
   background-color: var(--color-white);
   color: var(--color-black);
@@ -27,10 +35,14 @@
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  /* width: calc(var(--wrapper-width) * 1px); */
   width: 100%;
-  margin: 0 auto;
   overflow: hidden;
+}
+
+#wrapper {
+  position: relative;
+  width: 1880px; /* реальная ширина макета */
+  transform-origin: top left;
 }
 
 .container {
