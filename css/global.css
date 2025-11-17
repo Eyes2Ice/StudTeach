@@ -2,7 +2,6 @@
 @import url("./preloader.css");
 
 /* Global */
-
 html,
 body {
   margin: 0;
@@ -41,7 +40,7 @@ body {
 
 #wrapper {
   position: relative;
-  width: 1660px;
+  width: 1920px;
   transform-origin: top left;
 }
 

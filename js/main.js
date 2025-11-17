@@ -347,7 +347,7 @@ function closeModal(e) {
 })();
 
 // Адаптив для широких экранов
-const BASE_WIDTH = 1660;
+const BASE_WIDTH = 1920;
 const wrapper = document.getElementById("wrapper");
 
 const popup = document.querySelector(".modal");
@@ -411,7 +411,6 @@ function applyPopupScale() {
   }
 }
 
-/* объединённый вызов */
 function applyScaleAll() {
   applyPageScale();
   applyPopupScale();
