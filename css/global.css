@@ -41,7 +41,7 @@ body {
 
 #wrapper {
   position: relative;
-  width: 1880px; /* реальная ширина макета */
+  width: 1660px;
   transform-origin: top left;
 }
 
@@ -344,11 +344,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: calc(var(--modal-width) * 1px); */
   padding: 30px 101px 42px 104px;
   border-radius: 42px;
   text-align: center;
   background-color: var(--color-white);
+  transform-origin: center center;
+  will-change: transform;
 }
 
 .modal__title {
@@ -451,6 +452,18 @@ body {
 
 *::-webkit-scrollbar {
   width: 15px;
+}
+
+@media (min-width: 2560px) {
+  *::-webkit-scrollbar {
+    width: 20px;
+  }
+}
+
+@media (min-width: 3500px) {
+  *::-webkit-scrollbar {
+    width: 30px;
+  }
 }
 
 *::-webkit-scrollbar-track {

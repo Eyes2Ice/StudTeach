@@ -346,27 +346,77 @@ function closeModal(e) {
   setupHideLogic();
 })();
 
-const BASE_WIDTH = 1880;
+// Адаптив для широких экранов
+const BASE_WIDTH = 1660;
 const wrapper = document.getElementById("wrapper");
 
-function applyScale() {
-  let scale = window.innerWidth / BASE_WIDTH;
+const popup = document.querySelector(".modal");
+const modalWrapper = popup ? popup.querySelector(".modal__wrapper") : null;
 
-  // Если экран меньше 1880 — НЕ масштабируем, даём обычный адаптив
-  if (window.innerWidth <= BASE_WIDTH) {
+let popupBaseWidth = null;
+
+function ensurePopupBaseWidth() {
+  if (!modalWrapper || popupBaseWidth) return;
+  const prevTransform = modalWrapper.style.transform;
+  modalWrapper.style.transform = "none";
+
+  const rect = modalWrapper.getBoundingClientRect();
+  if (rect.width > 0) popupBaseWidth = Math.round(rect.width);
+
+  modalWrapper.style.transform = prevTransform;
+}
+
+function applyPageScale() {
+  if (!wrapper) return;
+  const w = window.innerWidth;
+  const scale = w / BASE_WIDTH;
+
+  if (w <= BASE_WIDTH) {
     wrapper.style.transform = "none";
     wrapper.style.width = "100%";
     document.body.style.width = "100%";
     return;
   }
 
-  // Если шире — масштабируем вниз (чтобы выглядело как 1440)
+  wrapper.style.transformOrigin = "top left";
   wrapper.style.transform = `scale(${scale})`;
   wrapper.style.width = BASE_WIDTH + "px";
-
-  // Чтобы не было белых полей справа
   document.body.style.width = BASE_WIDTH * scale + "px";
 }
 
-window.addEventListener("resize", applyScale);
-applyScale();
+function applyPopupScale() {
+  if (!popup || !modalWrapper) return;
+  if (wrapper && wrapper.contains(popup)) {
+    modalWrapper.style.transform = "none";
+    modalWrapper.style.width = "";
+    return;
+  }
+
+  const w = window.innerWidth;
+  const scale = w / BASE_WIDTH;
+
+  ensurePopupBaseWidth();
+
+  if (w <= BASE_WIDTH) {
+    modalWrapper.style.transform = "none";
+    if (popupBaseWidth) modalWrapper.style.width = ""; // пусть css управляет
+    return;
+  }
+
+  modalWrapper.style.transformOrigin = "center center";
+  modalWrapper.style.transform = `scale(${scale})`;
+
+  if (popupBaseWidth) {
+    modalWrapper.style.width = popupBaseWidth + "px";
+  }
+}
+
+/* объединённый вызов */
+function applyScaleAll() {
+  applyPageScale();
+  applyPopupScale();
+}
+
+window.addEventListener("resize", applyScaleAll);
+
+applyScaleAll();
