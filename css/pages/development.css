@@ -1,0 +1,64 @@
+/* Hero */
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  padding-top: 51px;
+}
+
+.hero__top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  column-gap: 30px;
+  height: 537px;
+  margin-bottom: 105px;
+}
+
+.hero__top::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 2%;
+  display: block;
+  width: 444px;
+  height: 248px;
+  aspect-ratio: 1;
+  background: url("../../assets/img/decoration/stars.png") center center / 100%
+    no-repeat;
+  z-index: -1;
+}
+
+.hero__img img {
+  width: 100%;
+}
+
+.hero__title {
+  max-width: 715px;
+  font-size: 80px;
+  line-height: var(--line-height);
+}
+
+.hero__btn {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: 50px;
+  max-width: 355px;
+  margin-bottom: 67px;
+  padding: 10px 6px 10px 96px;
+  border-radius: var(--border-radius);
+  font-family: "Impact";
+  font-size: 28px;
+  line-height: var(--line-height);
+  text-transform: uppercase;
+}
+
+.hero__btn:hover {
+  background-color: var(--color-black);
+}
+
+.hero__btn img {
+  width: 56px;
+  aspect-ratio: 1;
+}

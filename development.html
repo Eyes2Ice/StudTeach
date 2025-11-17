@@ -6,11 +6,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
-    <title>Контакты</title>
+    <title>Страница в разработке</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/pages/contact.css" />
-    <link rel="stylesheet" href="./css/media/contact-media.css" />
+    <link rel="stylesheet" href="./css/pages/development.css" />
+    <link rel="stylesheet" href="./css/media/development-media.css" />
   </head>
   <body class="body">
     <div id="preloader" class="preloader" aria-hidden="false">
@@ -97,13 +97,13 @@
               <div class="header__wrapper">
                 <ul class="header__menu menu">
                   <li class="menu__item">
-                    <a href="./index.html" class="menu__link">Главная</a>
+                    <a href="/" class="menu__link">Главная</a>
                   </li>
                   <li class="menu__item">
                     <a href="./about.html" class="menu__link">О нас</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Контакты</a>
+                    <a href="./contact.html" class="menu__link">Контакты</a>
                   </li>
                   <li class="menu__item">
                     <a href="./blog.html" class="menu__link">Блог</a>
@@ -149,102 +149,23 @@
         </div>
       </header>
       <main>
-        <section class="main__contact contact">
+        <section class="main__hero">
           <div class="container">
-            <div class="contact__inner">
-              <div class="contact__heading">
-                <h2 class="contact__title title">Контакты</h2>
-                <p class="contact__subtitle">
-                  В течении 15 минут <br />
-                  мы перезвоним и согласуем стоимость
-                </p>
-              </div>
-              <div class="contact__body">
-                <div class="contact__img">
+            <div class="hero__inner">
+              <div class="hero__top">
+                <div class="hero__img">
                   <img
-                    src="./assets/img/decoration/contact-girl.png"
-                    alt="Девушка с рюкзаком на плече и тетрадками в руках улыбается с счастливым видом"
+                    src="./assets/img/decoration/development.svg"
+                    alt="Декоративное изображение `Страница в разработке`"
                   />
                 </div>
-                <form
-                  action="mailto:drv-dev@mail.ru"
-                  class="contact__form form"
-                >
-                  <h4 class="form__title">Свяжитесь с нами</h4>
-                  <p class="form__subtitle">Любым удобным для вас способом:</p>
-                  <ul class="form__socials socials">
-                    <li class="socials__item">
-                      <a
-                        href="#"
-                        class="socials__link"
-                        aria-label="Ссылка на Telegram"
-                      >
-                        <svg
-                          width="30"
-                          height="30"
-                          viewBox="0 0 30 30"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M15 30C23.2863 30 30 23.2863 30 15C30 6.71375 23.2863 0 15 0C6.71375 0 0 6.71375 0 15C0 23.2863 6.71375 30 15 30ZM6.86375 14.675L21.3263 9.09875C21.9975 8.85625 22.5837 9.2625 22.3662 10.2775L22.3675 10.2762L19.905 21.8775C19.7225 22.7 19.2337 22.9 18.55 22.5125L14.8 19.7487L12.9912 21.4913C12.7912 21.6913 12.6225 21.86 12.235 21.86L12.5013 18.0438L19.4513 11.765C19.7537 11.4987 19.3837 11.3488 18.985 11.6138L10.3963 17.0212L6.69375 15.8663C5.89 15.6112 5.8725 15.0625 6.86375 14.675Z"
-                            fill="#1A1A1A"
-                          />
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="socials__item">
-                      <a
-                        href="#"
-                        class="socials__link"
-                        aria-label="Ссылка на WhatsApp"
-                      >
-                        <svg
-                          width="26"
-                          height="26"
-                          viewBox="0 0 26 26"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M11.841 0.0112296C11.3753 0.0555057 10.3255 0.239472 9.83224 0.363252C5.21469 1.52205 1.5355 5.19971 0.377036 9.81458C0.146105 10.7347 0.0379878 11.5396 0.00666129 12.5731C-0.0769946 15.3321 0.626834 17.8282 2.14418 20.1536L2.45562 20.6309L1.65491 23.0203C1.21451 24.3345 0.863816 25.4194 0.875564 25.4312C0.887362 25.443 2.01044 25.0957 3.37126 24.6596L5.84554 23.8665L6.26239 24.1145C8.0626 25.1855 9.68893 25.7282 11.7826 25.9564C12.5894 26.0444 14.2175 25.9935 15.0448 25.8545C17.8494 25.3831 20.2396 24.1607 22.2119 22.1892C23.8952 20.5067 25.0742 18.4386 25.6443 16.1688C25.9376 15.0011 26 14.4435 26 12.9917C26 11.5398 25.9376 10.9822 25.6443 9.81458C25.0742 7.54482 23.8952 5.4767 22.2119 3.79421C20.5287 2.11167 18.459 0.93269 16.1891 0.363303C15.1428 0.1009 14.4879 0.0212947 13.2395 0.00487542C12.5962 -0.00361379 11.9669 -0.000716277 11.841 0.0112296ZM8.57608 5.9733C9.15002 6.03973 9.09957 5.96303 10.0092 8.15172C10.6854 9.77875 10.7124 9.89592 10.4944 10.263C10.425 10.3799 10.1721 10.6927 9.93232 10.9583C9.41381 11.5328 9.32852 11.6758 9.36615 11.9079C9.42911 12.2957 10.5325 13.7711 11.3373 14.5437C12.1378 15.3121 12.8341 15.8061 13.777 16.2744C14.567 16.6668 14.9221 16.7766 15.1782 16.7077C15.289 16.6779 15.4246 16.6117 15.4793 16.5607C15.614 16.4351 15.997 15.9532 16.3671 15.4436C16.7441 14.9246 16.915 14.8062 17.2376 14.8409C17.4842 14.8674 18.3633 15.2592 19.8881 16.0223C20.5799 16.3685 20.7543 16.4772 20.7983 16.5893C20.9338 16.9345 20.7089 18.1544 20.4184 18.6499C20.1882 19.0425 19.6248 19.5141 19.0464 19.7982C17.9328 20.3452 17.0896 20.3886 15.6346 19.9738C15.0933 19.8195 13.998 19.419 13.355 19.1402C11.1079 18.166 9.003 16.309 7.10597 13.6271C5.94511 11.9859 5.48533 10.8301 5.48452 9.55101C5.48376 8.35256 5.81635 7.46694 6.57286 6.65314C6.97614 6.21928 7.26804 6.05061 7.7296 5.98453C8.15571 5.92358 8.14788 5.92368 8.57608 5.9733Z"
-                            fill="#1A1A1A"
-                          />
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                  <div class="form__inputs">
-                    <label>
-                      <input name="name" type="text" required /
-                      placeholder="Ваше имя" class="form__input">
-                    </label>
-                    <label>
-                      <input name="tel" type="tel" required / placeholder="Ваш
-                      номер" class="form__input">
-                    </label>
-                    <label class="contact__textarea">
-                      <textarea
-                        class="form__textarea"
-                        required
-                        placeholder="Ваше сообщение"
-                      ></textarea>
-                    </label>
-                    <label>
-                      <input class="form__checkbox" type="checkbox" required />
-                      <span
-                        >Даю соглашение на обработку
-                        <a href="#">персональных данных</a></span
-                      >
-                    </label>
-                    <button class="form__btn button" type="submit">
-                      Отправить сообщение
-                    </button>
-                  </div>
-                </form>
+                <h1 class="hero__title title">
+                  Страница находится в разработке
+                </h1>
               </div>
+              <a href="./index.html" class="hero__btn button"
+                >на главную <img src="./assets/img/icons/Arrow-out.svg" alt=""
+              /></a>
             </div>
           </div>
         </section>
@@ -371,16 +292,16 @@
                     <h5 class="menu__title">Навигация</h5>
                   </li>
                   <li class="menu__item">
-                    <a href="./index.html" class="menu__link">Главная</a>
+                    <a href="/" class="menu__link">Главная</a>
                   </li>
                   <li class="menu__item">
                     <a href="./about.html" class="menu__link">О нас</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Контакты</a>
+                    <a href="./contact.html" class="menu__link">Контакты</a>
                   </li>
                   <li class="menu__item">
-                    <a href="./blog.html" class="menu__link">Блог</a>
+                    <a href="./" class="menu__link">Блог</a>
                   </li>
                 </ul>
               </nav>

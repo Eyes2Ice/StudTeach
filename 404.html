@@ -6,11 +6,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
-    <title>Контакты</title>
+    <title>Страница не найдена</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/pages/contact.css" />
-    <link rel="stylesheet" href="./css/media/contact-media.css" />
+    <link rel="stylesheet" href="./css/pages/404.css" />
+    <link rel="stylesheet" href="./css/media/404-media.css" />
   </head>
   <body class="body">
     <div id="preloader" class="preloader" aria-hidden="false">
@@ -97,13 +97,13 @@
               <div class="header__wrapper">
                 <ul class="header__menu menu">
                   <li class="menu__item">
-                    <a href="./index.html" class="menu__link">Главная</a>
+                    <a href="/" class="menu__link">Главная</a>
                   </li>
                   <li class="menu__item">
                     <a href="./about.html" class="menu__link">О нас</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Контакты</a>
+                    <a href="./contact.html" class="menu__link">Контакты</a>
                   </li>
                   <li class="menu__item">
                     <a href="./blog.html" class="menu__link">Блог</a>
@@ -149,6 +149,31 @@
         </div>
       </header>
       <main>
+        <section class="main__hero hero">
+          <div class="container">
+            <div class="hero__inner">
+              <picture class="hero__img">
+                <source
+                  srcset="./assets/img/decoration/404-mobile.png"
+                  media="(max-width: 390px)"
+                />
+                <img
+                  src="assets/img/decoration/404.png"
+                  alt="Декоративное изображение: `Ни чего не найдено`"
+                />
+              </picture>
+              <div class="hero__content">
+                <h1 class="hero__title title">
+                  Что-то пошло не так вернитесь на главную
+                </h1>
+                <a href="./index.html" class="hero__btn button"
+                  >на главную
+                  <img src="./assets/img/icons/Arrow-out.svg" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="main__contact contact">
           <div class="container">
             <div class="contact__inner">
@@ -371,16 +396,16 @@
                     <h5 class="menu__title">Навигация</h5>
                   </li>
                   <li class="menu__item">
-                    <a href="./index.html" class="menu__link">Главная</a>
+                    <a href="/" class="menu__link">Главная</a>
                   </li>
                   <li class="menu__item">
                     <a href="./about.html" class="menu__link">О нас</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Контакты</a>
+                    <a href="./contact.html" class="menu__link">Контакты</a>
                   </li>
                   <li class="menu__item">
-                    <a href="./blog.html" class="menu__link">Блог</a>
+                    <a href="./" class="menu__link">Блог</a>
                   </li>
                 </ul>
               </nav>
